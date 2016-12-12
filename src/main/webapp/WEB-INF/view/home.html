@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Home</title>
+<style>
+tr th, tr td {
+	border: solid 1px #eee;
+}
+</style>
+</head>
+<body>
+	<h1 th:text="${title}">This is title</h1>
+
+	<span th:text="${date}">This is date</span>
+	<br>
+
+	<a th:href="@{/__${url}__/1}" th:text="${url}">This is href</a>
+	<br>
+	<br>
+
+	<a th:href="@{/order/details(id=3,ct=4,url=${url})}">Url with params</a>
+	<br>
+	
+	<a th:href="@{/home#all_info(action='show')}">Url with fragment</a>
+	<br>
+</body>
+</html>
